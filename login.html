@@ -23,11 +23,18 @@
         <input type="Account" id="inputAccount" class="form-control" placeholder="Account" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" onclick="login()" type="submit">Sign in</button>
       </form>
 
     </div> <!-- /container -->
 
 
+  </script>
+    function login(){
+      $.getJSON("http://falsemer.github.io/FalseMerData/login.json",function(data){
+        console.log(data);
+      });
+    }
+  <script>
 </body>
 </html>
