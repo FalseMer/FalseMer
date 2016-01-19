@@ -28,29 +28,12 @@
 
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
     <script src="//cdn.bootcss.com/bootbox.js/4.4.0/bootbox.min.js"></script>
 
-  <script>
-    function login(){
-      $.getJSON("http://falsemer.github.io/FalseMerData/login.json",function(data){
-        var loginOk = false;
-        for (var i = 0; i < data.length; i++) {
-          if(data[i].name==$("#inputAccount").val()&&data[i].password==$("#inputPassword").val()){
-            loginOk=true;
-            location.href="index.html";
-            return;
-          }
-        }
-        console.log(loginOk);
-        bootbox.alert("用户名密码错误！", function() {
-        });
+    <!-- Customer JavaScript 文件 -->
+    <script src="js/login.js"></script>
 
-      });
-    }
-  </script>
 </body>
 </html>
