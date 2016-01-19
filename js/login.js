@@ -9,9 +9,7 @@ function login(){
         return;
       }
     }
-    console.log(loginOk);
-    bootbox.alert("用户名密码错误！", function() {
-    });
+    alert("Login Error...");
 
   });
 }
