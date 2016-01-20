@@ -47,7 +47,15 @@
         });
         $('.message_input').keyup(function(e) {
             if (e.which === 13) {
-                return sendMessage(getMessageText());
+                sendMessage(getMessageText());
+                $.ajax({
+                  type:'get',
+                  dataType:'json',
+                  url:'http://www.tuling123.com/openapi/api?key=0c8b08a118c25797dd2989c2340e51f7&info='+getMessageText(),
+                  success:function(msg){
+                    sendMessage(msg.text);
+                  }
+                })
             }
         });
         sendMessage('Hello Philip! :)');
