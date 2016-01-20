@@ -43,7 +43,7 @@
             }, 300);
         };
         $('.send_message').click(function(e) {
-            return sendMessage(getMessageText());
+            sendMessage(getMessageText());
             $.ajax({
               type:'get',
               dataType:'json',
@@ -56,6 +56,7 @@
         $('.message_input').keyup(function(e) {
             if (e.which === 13) {
                 sendMessage(getMessageText());
+                console.log(getMessageText());
                 $.ajax({
                   type:'get',
                   dataType:'json',
