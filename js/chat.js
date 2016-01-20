@@ -56,7 +56,7 @@
         $('.message_input').keyup(function(e) {
             if (e.which === 13) {
                 sendMessage(getMessageText());
-                console.log(getMessageText());
+                console.log("message="+getMessageText());
                 $.ajax({
                   type:'get',
                   dataType:'json',
