@@ -114,7 +114,7 @@
 
         $(function(){
           $.getJSON("http://falsemer.github.io/FalseMerData/pictures.json",function(data){
-            alert("123");
+            console.log(data);
             for (var i = 0; i < data.length; i++) {
               $("#imageShowTile").append('<a href="javascript:void(0);" class="live-slide"><img src="'+data[i].picUrl+'" data-role="fitImage" data-format="fill"></a>');
             }
